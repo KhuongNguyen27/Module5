@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+const fruits = ['Apple', 'Banana', 'Orange', 'Apricot', 'Black rowan', 'Cranberry'];
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <div>
+        <h1>List of Fruits</h1>
+        <ul>
+            { fruits.map((item) => (
+                <li>{item}</li>
+            ))};
+        </ul>
+    </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
